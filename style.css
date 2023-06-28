@@ -1,9 +1,15 @@
 body, html {
     height: 100%;
     margin: 0;
-  }
+    background-color: cornsilk;
+}
   
-  .container {
+a {
+    color: white;
+    text-decoration: none; 
+}
+
+.container {
     text-align: center;
     height: 100%;
     padding: 16px;
@@ -12,43 +18,81 @@ body, html {
     gap: 15px;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 5fr 1fr;
- }
+}
   
-  .container div {
+.container div {
     padding: 15px;
     font-size: 32px;
     font-family: Helvetica;
     font-weight: bold;
     color: white;
     border-radius: 15px;
-  }
+}
   
-  .header {
-    background-color: #FFDE22;
+.header {
+    background-color: #28cb95;
     grid-column: 1 / 3;
-  }
+}
   
-  .sidebar {
+.sidebar {
     background-color: #FF7755;
     grid-row: 2 / 4;
-  }
-  
-  .nav {
+    #newBookBtn{
+        background-color: rgb(40, 176, 115);
+        color: white;
+        font-size: 32px;
+        border-radius: 10px ;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+    #newBookBtn:active{
+        background-color:rgb(56, 204, 98) ;
+    }
+    #new-book-form {
+        width: 360px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        text-align:center;
+        gap: 5px;
+        color: black;
+        flex-direction: column;
+        box-shadow: 2px 2px 5px rgba(173, 110, 110, 0.1);
+        background-color: white;
+        .submit-btn{
+            width: fit-content;
+            justify-self: center;
+            align-self: center;
+            font-size: large;
+        }
+      }
+}
+
+.nav {
     background-color: #00DDFF;
-  }
+}
   
-  .article {
+#book-section {
     background-color: #bccbde;
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,250px);
+    gap: 15px;
+}
   
-  .article p {
+#book-section div{
+    border-radius: 6px;
+    background-color: green;
+    
+}
+#book-section p {
     font-size: 18px;
     font-family: sans-serif;
     color: white;
     text-align: left;
-  }
+}
   
-  .footer {
+.footer {
     background-color: #393f4d;
     grid-column: 1 / 3;
-  }
+}
